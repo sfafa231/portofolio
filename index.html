@@ -157,6 +157,27 @@
     .nav-menu-btn{display:block}
   }
   @media(max-width:520px){header{padding:120px 0 52px}.stats{grid-template-columns:1fr 1fr}.stat{padding:16px}}
+  /* ── materi belajar ── */
+  .materi .m-sub{color:var(--muted);font-size:13.5px;margin:6px 0 14px}
+  .materi-list{display:flex;flex-direction:column;gap:10px}
+  details.mat{background:var(--card2);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:border-color .2s}
+  details.mat:hover{border-color:rgba(59,130,246,.5)}
+  details.mat>summary{cursor:pointer;padding:13px 15px;font-weight:700;font-size:13.5px;line-height:1.4;
+    display:flex;justify-content:space-between;align-items:center;gap:10px;list-style:none;user-select:none}
+  details.mat>summary::-webkit-details-marker{display:none}
+  details.mat>summary::after{content:"+";flex-shrink:0;width:22px;height:22px;border-radius:7px;
+    display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;
+    color:var(--accent2);background:rgba(34,211,238,.10);border:1px solid rgba(34,211,238,.25);transition:transform .2s}
+  details.mat[open]>summary::after{content:"–";transform:rotate(180deg)}
+  details.mat .m-body{padding:2px 15px 15px;color:var(--muted);font-size:13.5px;border-top:1px solid var(--line)}
+  details.mat .m-body p{margin:11px 0 0}
+  details.mat .m-body b{color:var(--text)}
+  details.mat .m-body code.mono{color:#9cc3ff;background:rgba(59,130,246,.10);padding:1px 6px;border-radius:6px;font-size:12.5px}
+  .mtags{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+  .share-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;
+    max-width:760px;margin:36px auto 0;padding:20px 24px;text-align:center;
+    background:var(--card);border:1px solid var(--line);border-radius:18px}
+  .share-bar p{color:var(--muted);font-size:13.5px}
   /* ── cetak / PDF ── */
   @media print{
     body{background:#fff;color:#111}
@@ -182,6 +203,7 @@
       <a href="#tentang">Tentang</a>
       <a href="#keahlian">Keahlian</a>
       <a href="#proyek">Proyek</a>
+      <a href="#materi">Materi</a>
       <a href="#kontak">Kontak</a>
     </div>
     <button class="nav-menu-btn" id="menuBtn" aria-label="Menu">☰</button>
@@ -320,6 +342,309 @@
   </div>
 </section>
 
+<section id="materi" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="container">
+    <div class="sec-head">
+      <span class="kicker">Materi &amp; Ilmu</span>
+      <h2>Kumpulan Materi Belajar</h2>
+      <p>Ringkasan materi yang saya pelajari — biar ilmu ini bisa dibaca dan dibagikan ke teman-teman. Setiap topik bisa diklik untuk lihat penjelasannya.</p>
+    </div>
+
+    <div class="grid g3">
+      <!-- ===================== PEMROGRAMAN ===================== -->
+      <div class="card materi">
+        <div class="ic">💻</div>
+        <h3>Pemrograman</h3>
+        <p class="m-sub">Dari logika dasar sampai pengembangan aplikasi web.</p>
+        <div class="materi-list">
+
+          <details class="mat">
+            <summary>1. Algoritma &amp; Logika Pemrograman</summary>
+            <div class="m-body">
+              <p><b>Algoritma</b> adalah urutan langkah logis untuk menyelesaikan suatu masalah, ditulis sebelum menjadi kode program. Contoh sederhana: menghitung rata-rata = <i>jumlahkan semua nilai, lalu bagi dengan banyaknya data</i>. Semua bahasa pemrograman dibangun di atas dasar ini, jadi kuasai logikanya dulu sebelum memilih bahasa.</p>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>2. Flowchart</summary>
+            <div class="m-body">
+              <p>Diagram yang menggambarkan alur program dengan simbol baku: <b>oval</b> (mulai/selesai), <b>jajar genjang</b> (input/output), <b>persegi</b> (proses), <b>belah ketupat</b> (keputusan/percabangan). Flowchart membantu merancang logika dan menemukan kesalahan sebelum menulis kode — sering jadi materi ujian pertama di mata kuliah algoritma.</p>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>3. Dasar Python</summary>
+            <div class="m-body">
+              <p>Python adalah bahasa serbaguna yang paling ramah untuk pemula karena kodenya mirip bahasa manusia. Belajar mulai dari <b>variabel dan tipe data</b> (int, float, str, bool), <b>percabangan</b> <code class="mono">if/else</code>, <b>perulangan</b> <code class="mono">for/while</code>, sampai <b>fungsi</b>. Contoh: <code class="mono">print("Halo AMIK Serang")</code>. Dipakai juga untuk otomasi jaringan dan cyber security.</p>
+              <div class="mtags"><span>Python</span><span>If/Else</span><span>Loop</span></div>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>4. Dasar JavaScript</summary>
+            <div class="m-body">
+              <p>JavaScript adalah bahasa utama untuk membuat halaman web <b>interaktif</b> dan berjalan langsung di browser (dan di server lewat Node.js). Materi intinya: manipulasi elemen halaman (DOM), menangani <i>event</i> klik, sampai mengambil data dari server dengan <i>fetch API</i>. Wajib dikuasai kalau ingin menjadi web developer.</p>
+              <div class="mtags"><span>DOM</span><span>Event</span><span>Fetch API</span></div>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>5. HTML &amp; CSS</summary>
+            <div class="m-body">
+              <p><b>HTML</b> menentukan isi/struktur halaman (judul, paragraf, gambar, tautan), sedangkan <b>CSS</b> mengatur tampilannya (warna, tata letak, halaman responsif di HP). Kombinasi keduanya adalah fondasi setiap website — portofolio ini sendiri dibangun dari HTML dan CSS murni.</p>
+              <div class="mtags"><span>HTML5</span><span>CSS3</span><span>Responsive</span></div>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>6. PHP &amp; Web Server-Side</summary>
+            <div class="m-body">
+              <p>PHP berjalan di <b>server</b> untuk membuat website dinamis: memproses form, mengelola sesi login, dan terhubung ke database. Materi inti: sintaks dasar PHP, koneksi MySQL (mysqli/PDO), dan operasi <b>CRUD</b> (Create, Read, Update, Delete). Banyak sistem informasi kampus dibangun dengan PHP.</p>
+              <div class="mtags"><span>PHP</span><span>PDO</span><span>CRUD</span></div>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>7. Database &amp; SQL</summary>
+            <div class="m-body">
+              <p>Database menyimpan data secara terstruktur. <b>SQL</b> (Structured Query Language) adalah bahasanya: <code class="mono">SELECT</code> untuk membaca, <code class="mono">INSERT</code> menambah, <code class="mono">UPDATE</code> mengubah, <code class="mono">DELETE</code> menghapus, plus <code class="mono">JOIN</code> untuk menggabungkan tabel. Pelajari juga <b>normalisasi data</b> dan <b>indexing</b> supaya query cepat.</p>
+              <div class="mtags"><span>MySQL</span><span>Join</span><span>Index</span></div>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>8. Struktur Data</summary>
+            <div class="m-body">
+              <p>Struktur data adalah cara menyimpan dan mengorganisir data agar efisien: <b>array</b> (kumpulan data berurutan), <b>stack</b> (masuk terakhir keluar pertama — seperti riwayat undo), <b>queue</b> (antrian FIFO), <b>linked list</b>, <b>tree</b>, dan <b>hash map</b>. Memilih struktur yang tepat membuat program jauh lebih cepat.</p>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>9. Pemrograman Berorientasi Objek (OOP)</summary>
+            <div class="m-body">
+              <p>OOP memodelkan masalah sebagai <b>objek</b> yang punya <i>property</i> (data) dan <i>method</i> (perilaku). Pilar utamanya: <b>encapsulation</b> (data disembunyikan), <b>inheritance</b> (kelas turunan), <b>polymorphism</b> (bentuk berbeda), dan <b>abstraction</b>. Hasilnya kode modular, mudah dirawat, dan dipakai di proyek besar.</p>
+              <div class="mtags"><span>Class</span><span>Encapsulation</span><span>Inheritance</span></div>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>10. Git &amp; GitHub</summary>
+            <div class="m-body">
+              <p><b>Git</b> adalah sistem <i>version control</i> untuk melacak setiap perubahan kode: <code class="mono">git init</code>, <code class="mono">git add</code>, <code class="mono">git commit</code>, <code class="mono">git branch</code>, lalu <code class="mono">git push</code> ke <b>GitHub</b>. GitHub juga menjadi tempat portofolio kode terbaik dan sarana kolaborasi tim. Jika terjadi error, kode bisa kembali ke versi sebelumnya.</p>
+              <div class="mtags"><span>Git</span><span>Branch</span><span>GitHub</span></div>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>11. Cara Belajar Praktis</summary>
+            <div class="m-body">
+              <p>Kunci belajar pemrograman adalah <b>konsisten latihan</b>: tulis kode tiap hari di editor (VS Code), kerjakan proyek kecil (kalkulator, to-do list, sistem nilai), baca dokumentasi resmi, dan jangan takut salah — <b>error justru jembatan belajar</b>. Mulai dari satu bahasa sampai mahir, baru pelajari bahasa berikutnya.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+      <!-- ===================== JARINGAN ===================== -->
+      <div class="card materi">
+        <div class="ic">🌐</div>
+        <h3>Jaringan Komputer</h3>
+        <p class="m-sub">Dasar jaringan sampai konfigurasi perangkat &amp; monitoring.</p>
+        <div class="materi-list">
+
+          <details class="mat">
+            <summary>1. Konsep Dasar Jaringan</summary>
+            <div class="m-body">
+              <p>Jaringan komputer adalah kumpulan perangkat yang saling terhubung untuk <b>berbagi data dan sumber daya</b> (file, printer, internet). Berdasarkan luasnya ada <b>LAN</b> (kantor/gedung), <b>MAN</b> (kota), dan <b>WAN</b> (antar negara — internet). Komponennya: media transmisi (kabel/WiFi), perangkat, dan protokol.</p>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>2. Model OSI Layer (7 Lapisan)</summary>
+            <div class="m-body">
+              <p>Kerangka standar komunikasi jaringan dari bawah ke atas: <b>1. Physical</b> (media/kabel), <b>2. Data Link</b> (switch, MAC address), <b>3. Network</b> (IP, routing), <b>4. Transport</b> (TCP/UDP, port), <b>5. Session</b>, <b>6. Presentation</b> (enkripsi), <b>7. Application</b> (HTTP, FTP, DNS). Mnemonik mudah: <i>"Please Do Not Throw Sausage Pizza Away"</i>.</p>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>3. TCP/IP &amp; Port</summary>
+            <div class="m-body">
+              <p>Model yang benar-benar dipakai internet: <b>Application → Transport → Internet → Network Access</b>. <b>TCP</b> andal (memastikan data sampai utuh dan berurutan — untuk web, email), sedangkan <b>UDP</b> cepat tanpa jaminan (untuk streaming dan game). <b>Port</b> adalah pintu layanan: 80 = HTTP, 443 = HTTPS, 22 = SSH, 53 = DNS, 3306 = MySQL.</p>
+              <div class="mtags"><span>TCP/IP</span><span>Port</span><span>UDP</span></div>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>4. IP Address &amp; Subnetting</summary>
+            <div class="m-body">
+              <p><b>IP Address</b> adalah alamat unik perangkat di jaringan. <b>IPv4</b> tersusun dari 4 oktet (mis. 192.168.1.1), <b>IPv6</b> lebih panjang untuk mengatasi keterbatasan IPv4. <b>Subnetting/CIDR</b> membagi jaringan: <code class="mono">/24</code> artinya subnet mask 255.255.255.0 dan menyediakan ±254 host. IP <b>private</b>: 10.x.x.x, 172.16–31.x.x, 192.168.x.x.</p>
+              <div class="mtags"><span>IPv4</span><span>CIDR</span><span>Subnet</span></div>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>5. DNS (Domain Name System)</summary>
+            <div class="m-body">
+              <p>DNS menerjemahkan nama domain (mis. <i>google.com</i>) menjadi <b>IP address</b> yang dimengerti komputer — seperti buku telepon internet. Pencarian berjalan berjenjang: resolver → root → TLD → server otoritatif, lalu hasilnya di-<i>cache</i> agar cepat. Cek nama domain tidak harus lewat browser: gunakan <code class="mono">nslookup google.com</code>.</p>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>6. Perangkat Jaringan</summary>
+            <div class="m-body">
+              <p><b>Router</b> menghubungkan jaringan berbeda dan melakukan NAT (menghubungkan LAN ke internet), <b>switch</b> meneruskan data antar perangkat dalam satu LAN berdasarkan MAC address, <b>access point</b> menyebarkan WiFi, <b>firewall</b> menyaring lalu lintas berbahaya. Media fisik: kabel UTP + konektor RJ45, dan fiber optik untuk jarak jauh/cepat.</p>
+              <div class="mtags"><span>Router</span><span>Switch</span><span>Access Point</span></div>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>7. Topologi Jaringan</summary>
+            <div class="m-body">
+              <p><b>Star</b> (semua perangkat ke satu titik pusat — paling populer, mudah dikelola, tapi titik pusat jadi titik gagal), <b>Bus</b> (satu kabel utama — usang), <b>Ring</b> (data berputar satu arah), <b>Mesh</b> (semua saling terhubung — paling andal tapi mahal), dan <b>Tree</b> (kombinasi hierarkis). Pemilihan topologi disesuaikan skala dan anggaran.</p>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>8. Protokol Layanan</summary>
+            <div class="m-body">
+              <p><b>HTTP/HTTPS</b> melayani web, <b>FTP</b> transfer file, <b>SMTP/IMAP/POP3</b> mengatur email, <b>DHCP</b> membagikan IP otomatis ke perangkat, <b>ARP</b> memetakan IP → MAC address, dan <b>ICMP</b> dipakai perintah <code class="mono">ping</code>. Memahami protokol ini memudahkan diagnosis saat jaringan bermasalah.</p>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>9. VLAN &amp; Konfigurasi Perangkat</summary>
+            <div class="m-body">
+              <p><b>VLAN</b> membagi satu switch fisik menjadi beberapa jaringan logis (mis. ruang guru, siswa, server) sehingga trafik lebih aman dan tertata. Praktiknya bisa disimulasikan di <b>Cisco Packet Tracer</b> atau konfigurasi asli di <b>MikroTik</b>: atur IP pada interface, routing statis/dinamis, dan DHCP server.</p>
+              <div class="mtags"><span>VLAN</span><span>Packet Tracer</span><span>MikroTik</span></div>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>10. Wireless &amp; WiFi</summary>
+            <div class="m-body">
+              <p>Standar WiFi ditandai IEEE 802.11 (a/b/g/n/ac/ax — <i>ax</i> dikenal sebagai <b>WiFi 6</b>). Keamanan WiFi berkembang dari <b>WEP</b> (mudah ditembus, jangan dipakai) → <b>WPA2</b> (standar saat ini) → <b>WPA3</b> (paling aman). Selalu pakai password kuat dan matikan WPS jika tidak diperlukan.</p>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>11. Monitoring &amp; Troubleshooting</summary>
+            <div class="m-body">
+              <p>Perintah dasar untuk memeriksa jaringan: <code class="mono">ping</code> (apakah host hidup), <code class="mono">traceroute</code> (jalur yang dilalui paket), <code class="mono">ipconfig/ifconfig</code> (IP komputer), <code class="mono">netstat/ss</code> (port yang terbuka), dan <b>Wireshark</b> untuk menganalisis paket data secara detail. Pola troubleshooting: cek fisik → IP → gateway → DNS.</p>
+              <div class="mtags"><span>Ping</span><span>Traceroute</span><span>Wireshark</span></div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+      <!-- ===================== CYBER SECURITY ===================== -->
+      <div class="card materi">
+        <div class="ic">🛡</div>
+        <h3>Cyber Security &amp; Kali Linux</h3>
+        <p class="m-sub">Keamanan informasi, serangan umum, hingga tools etis.</p>
+        <div class="materi-list">
+
+          <details class="mat">
+            <summary>1. Pengantar Keamanan Siber</summary>
+            <div class="m-body">
+              <p>Keamanan siber adalah praktik <b>melindungi data, perangkat, dan jaringan</b> dari akses atau serangan yang tidak sah. Ada 3 area utama: <b>prevention</b> (cegah), <b>detection</b> (deteksi), dan <b>response</b> (tanggap). Di era digital, mahasiswa IT wajib memahami risiko keamanan sejak dini — bukan hanya cara menyerang, tapi cara melindungi.</p>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>2. CIA Triad</summary>
+            <div class="m-body">
+              <p>Tiga pilar keamanan informasi: <b>Confidentiality</b> (kerahasiaan — data hanya boleh dibaca yang berhak, lewat enkripsi &amp; kontrol akses), <b>Integrity</b> (keutuhan — data tidak diubah, diverifikasi lewat hash), dan <b>Availability</b> (ketersediaan — data selalu bisa diakses lewat backup &amp; redundansi). Semua sistem keamanan pada akhirnya menjaga 3 hal ini.</p>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>3. Jenis-Jenis Malware</summary>
+            <div class="m-body">
+              <p><b>Virus</b> menempel di file dan menyebar saat file dijalankan, <b>worm</b> menyebar sendiri lewat jaringan, <b>trojan</b> menyamar sebagai software sah, <b>ransomware</b> mengunci data lalu meminta tebusan, <b>spyware</b> mengintai aktivitas, dan <b>rootkit</b> bersembunyi jauh di dalam sistem. Pertahanan dasar: antivirus terbaru, rajin update, dan tidak membuka lampiran mencurigakan.</p>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>4. Serangan Umum &amp; Cara Mencegahnya</summary>
+            <div class="m-body">
+              <p><b>Phishing</b> = tipu lewat email/WA palsu (cegah: cek alamat pengirim, jangan klik tautan asing). <b>Social engineering</b> = memanipulasi manusia agar membocorkan data (jangan bagikan OTP/kata sandi). <b>Brute force</b> = menebak password (pakai password panjang &amp; unik). <b>DDoS</b> = membanjiri layanan hingga down (mitigasi di server/proxy). <b>SQL Injection</b> = memanipulasi query database (pakai prepared statement). <b>XSS</b> = menyuntik script di web (validasi input, escape output).</p>
+              <div class="mtags"><span>Phishing</span><span>DDoS</span><span>SQLi</span><span>XSS</span></div>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>5. Firewall &amp; IDS/IPS</summary>
+            <div class="m-body">
+              <p><b>Firewall</b> menyaring lalu lintas berdasarkan aturan (mana yang boleh masuk/keluar). <b>IDS</b> (Intrusion Detection System) mendeteksi aktivitas mencurigakan, sedangkan <b>IPS</b> mendeteksi <b>dan langsung memblokir</b>. <b>DMZ</b> adalah zona publik yang dipisah dari jaringan internal. Contoh tools: iptables, pfSense, Snort, Suricata.</p>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>6. Enkripsi &amp; Hashing</summary>
+            <div class="m-body">
+              <p><b>Enkripsi</b> mengubah data menjadi tidak terbaca: simetris (satu kunci — <b>AES</b>) dan asimetris (kunci publik &amp; privat — <b>RSA</b>, dipakai TLS/HTTPS). <b>Hashing</b> mengubah data menjadi sidik jari unik (MD5, SHA-256) untuk memverifikasi keutuhan data dan menyimpan password dengan aman (plus <i>salt</i>). Gembok 🔒 di browser = koneksimu terenkripsi HTTPS.</p>
+              <div class="mtags"><span>AES</span><span>RSA</span><span>TLS</span><span>SHA</span></div>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>7. VPN &amp; Keamanan Wi-Fi</summary>
+            <div class="m-body">
+              <p><b>VPN</b> (Virtual Private Network) membuat terowongan terenkripsi antara perangkatmu dan server, sehingga aktivitas aman saat memakai Wi-Fi publik (kafe/kampus). Layanan VPN bagus: WireGuard atau OpenVPN. Untuk jaringan sendiri: gunakan WPA2/WPA3 dengan password kuat dan rutin memperbarui firmware router.</p>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>8. Etika Hacking &amp; Hukum</summary>
+            <div class="m-body">
+              <p>Ada 3 "topi": <b>White hat</b> (menguji sistem dengan izin untuk melindungi — ini yang benar), <b>grey hat</b> (tanpa izin tapi tanpa niat jahat — tetap berisiko), dan <b>black hat</b> (ilegal, merugikan). Di Indonesia berlaku <b>UU ITE</b>. Aturan emas: <b>selalu minta izin tertulis</b> sebelum menguji sistem mana pun — seperti praktik pengujian jaringan kampus yang saya lakukan dengan izin resmi.</p>
+              <div class="mtags"><span>White Hat</span><span>UU ITE</span><span>Izin resmi</span></div>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>9. Metodologi Penetration Testing</summary>
+            <div class="m-body">
+              <p>Proses menguji keamanan secara profesional mengikuti alur: <b>1. Reconnaissance</b> — mengumpulkan informasi target (OSINT); <b>2. Scanning</b> — mencari port &amp; layanan dengan Nmap; <b>3. Exploitation</b> — memanfaatkan celah (Metasploit, crack password dengan John/Hydra); <b>4. Post-exploitation</b> — mengamankan akses, menaikkan hak akses; <b>5. Reporting</b> — laporan temuan dan rekomendasi perbaikan. Langkah 5 ini paling penting: tujuan pentest adalah <b>memperbaiki</b>, bukan merusak.</p>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>10. Apa itu Kali Linux?</summary>
+            <div class="m-body">
+              <p><b>Kali Linux</b> adalah sistem operasi berbasis Debian yang dikhususkan untuk keamanan siber dan penetration testing. Di dalamnya sudah tersedia <b>600+ tools</b> (Nmap, Wireshark, Metasploit, Aircrack-ng, dan lainnya). Perbarui dengan: <code class="mono">sudo apt update &amp;&amp; sudo apt upgrade</code>. Ingat, semua penggunaannya harus <b>etis dan legal</b>.</p>
+              <div class="mtags"><span class="kali">Kali Linux</span><span>Debian</span><span>Toolkit</span></div>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>11. Tools Kali Linux Esensial</summary>
+            <div class="m-body">
+              <p><b>Nmap</b> — scan port/layanan: <code class="mono">nmap -sV 192.168.1.1</code>. <b>Wireshark</b> — analisis paket. <b>Metasploit</b> — kerangka eksploitasi. <b>msfvenom</b> — membuat payload. <b>Hydra</b> — uji login (brute force) yang sah pada sistem sendiri. <b>John the Ripper / Hashcat</b> — membuka hash password. <b>Aircrack-ng</b> — audit keamanan WiFi. <b>Burp Suite</b> — menguji aplikasi web (intercept request). <b>SQLMap</b> — mendeteksi SQL Injection. <b>Gobuster</b> — menemukan direktori web.</p>
+              <div class="mtags"><span>Nmap</span><span>Metasploit</span><span>Burp</span><span>Hydra</span><span>John</span></div>
+            </div>
+          </details>
+
+          <details class="mat">
+            <summary>12. Keamanan Password &amp; Backup</summary>
+            <div class="m-body">
+              <p>Habit wajib: gunakan <b>password panjang, unik per akun</b>, simpan di <b>password manager</b> (Bitwarden/KeePass), dan aktifkan <b>2FA/MFA</b>. Untuk data penting terapkan aturan <b>backup 3-2-1</b>: 3 salinan data, di 2 media berbeda, 1 di lokasi terpisah (cloud). Uji pemulihan backup berkala — backup yang tidak pernah dicoba tidak bisa dipercaya.</p>
+              <div class="mtags"><span>2FA</span><span>Password Manager</span><span>Backup 3-2-1</span></div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="share-bar">
+      <p>📚 Ilmu semakin berharga saat dibagikan — kirim portofolio ini ke teman yang juga tertarik belajar IT.</p>
+      <button class="btn btn-ghost" id="copyLink" type="button">🔗 Salin link portofolio</button>
+    </div>
+  </div>
+</section>
+
 <section id="kontak">
   <div class="container">
     <div class="sec-head">
@@ -368,6 +693,21 @@
     else { l.style.display = "flex"; l.style.flexDirection = "column"; l.style.position = "fixed";
            l.style.top = "64px"; l.style.left = "0"; l.style.right = "0"; l.style.background = "rgba(11,15,26,.97)";
            l.style.padding = "20px 26px"; l.style.borderBottom = "1px solid var(--line)"; }
+  });
+  var cl = document.getElementById("copyLink");
+  if (cl) cl.addEventListener("click", function () {
+    var t = location.href;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(t).then(function () {
+        cl.textContent = "✅ Link disalin!";
+        setTimeout(function () { cl.textContent = "🔗 Salin link portofolio"; }, 2000);
+      });
+    } else {
+      var ta = document.createElement("textarea"); ta.value = t; document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); cl.textContent = "✅ Link disalin!"; } catch (e) {}
+      document.body.removeChild(ta);
+      setTimeout(function () { cl.textContent = "🔗 Salin link portofolio"; }, 2000);
+    }
   });
 </script>
 </body>
